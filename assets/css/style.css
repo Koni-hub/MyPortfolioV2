@@ -1,0 +1,870 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #f1f1f1;
+  font-family: "PT Mono", monospace;
+}
+
+/* ---------------------------- Header -----------------------------------*/
+
+header {
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header when scrolled */
+header.scrolled {
+  background-color: #000000;
+}
+
+header.scrolled #logo-name span {
+  color: white;
+}
+
+header.scrolled .hamburger span {
+  background-color: white;
+}
+
+header.scrolled #mySidenav .closebtn {
+  color: white;
+}
+
+#logo-name span {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-style: normal;
+  text-transform: uppercase;
+  color: white;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  transform-origin: top left;
+}
+
+.hamburger span:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+.menu-button.open .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menu-button.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* ---------------------------- Nav Bar -----------------------------------*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+#mySidenav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#mySidenav a {
+  font-family: "PT Mono", monospace;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 50px;
+  color: #777777;
+  display: block;
+}
+
+#mySidenav a:hover {
+  color: white;
+}
+
+#mySidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 150px;
+  cursor: pointer;
+  font-size: 65px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#mySidenav .closebtn::after {
+  color: white;
+}
+
+#mySidenav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  display: block;
+  width: 100%;
+}
+
+li a {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+}
+
+#toggle-mode img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ---------------------------- Carousel -----------------------------------*/
+
+.carousel-container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.slide {
+  position: relative;
+  flex: 1 0 100%;
+  width: 100%;
+  height: 100%;
+
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s ease-in-out;
+  filter: blur(5px);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.next {
+  right: 16px;
+}
+
+.prev {
+  left: 16px;
+}
+
+.next:hover,
+.prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+/* ----------------------------------About Us----------------------------------------- */
+
+.about h1 {
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+  margin-top: 150px;
+  letter-spacing: 8px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.about .info {
+  padding: 20px;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  gap: 25px;
+}
+
+.about img {
+  border-radius: 25px;
+}
+
+.info h5 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    monospace;
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 1.5rem 0 1.2rem 0;
+  text-align: justify;
+  word-spacing: 5px;
+}
+
+.info .about-info {
+  padding: 0 0 1.2rem 0;
+  font-size: 0.2rem;
+  font-weight: 400;
+  display: flex;
+  padding-top: 10px;
+  max-width: 1000px;
+  margin: auto;
+  gap: 25px;
+}
+
+.about-info p {
+  font-family: "PT Mono", monospace;
+  font-size: small;
+  font-weight: 200;
+  padding-bottom: 25px;
+}
+/* ---------------------------------- Skills ----------------------------------------- */
+
+.skills h1 {
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+  margin-top: 150px;
+  letter-spacing: 8px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.skills h3 {
+  font-family: "PT Mono", monospace;
+  font-weight: 200;
+  font-size: 18px;
+  font-style: normal;
+  width: 85%;
+  margin: auto auto;
+  text-align: center;
+  padding-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+.info-card-container {
+  margin: auto auto;
+  text-align: center;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+}
+
+.info-card {
+  height: 200px;
+  width: 180px;
+}
+
+.info-card img {
+  width: 100%;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.info-card img:hover + h4 {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.info-card h4 {
+  visibility: hidden;
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* ---------------------------------- Project----------------------------------------- */
+
+.project h1 {
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+  margin-top: 150px;
+  letter-spacing: 8px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.project-container {
+  padding: 42px 32px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-card-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.project-card {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  display: flex;
+  flex: 0 0 100%;
+  height: 500px;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.next {
+  right: 16px;
+}
+
+.prev {
+  left: 16px;
+}
+
+.next:hover,
+.prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.project-card .img-holder {
+  box-sizing: border-box;
+  padding: 4.8rem 25px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border: solid 0.1rem #f3f4f6;
+  background-color: #f9fafb;
+}
+
+.project-card img {
+  object-fit: contain;
+  max-width: 100%;
+  min-height: 250px;
+}
+
+.project-card .description {
+  box-sizing: border-box;
+  padding: 2.8rem 0 2.8rem 2.3rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.tools {
+  font-family: "PT Mono", monospace;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px 10px;
+  width: max-content;
+}
+
+.description h3,
+.description h5 {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  max-width: 85%;
+}
+
+.description h5 {
+  font-family: "PT Mono", monospace;
+  font-weight: 200;
+  text-align: justify;
+  max-width: 85%;
+}
+
+.project-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.group-btn {
+  display: flex;
+  gap: 15px;
+}
+
+.button-github {
+  background-color: #282936;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.button-github #github {
+  font-size: 25px;
+}
+
+/* ---------------------------------- Services ----------------------------------------- */
+
+.service h1 {
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+  margin-top: 150px;
+  letter-spacing: 8px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.service-container {
+  padding: 0 0 4rem 0;
+}
+
+.service-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+}
+
+.service-card {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.service-card img {
+  max-width: 250px;
+  min-height: 350px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.service-card h4 {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin: 0 0 10px 0;
+}
+
+.service-card p {
+  font-weight: 200;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    monospace;
+}
+
+.service-card:hover {
+  animation: 0.8s;
+  transform: scale(1.05);
+}
+
+/* ---------------------------------- Contact Us ----------------------------------------- */
+
+.session {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/contact.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  color: white;
+}
+
+.left,
+.right {
+  max-width: 100%;
+}
+
+.contact-message {
+  width: auto;
+  max-width: none;
+}
+
+.left .contact-message h4 {
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  font-size: 1.5rem;
+  border-bottom: #0056b3 2px solid;
+  display: inline;
+}
+
+.left .contact-message p {
+  font-weight: 200;
+  padding: 15px 0 0 0;
+}
+
+.contact-message p {
+  font-family: "PT Mono", monospace;
+  font-weight: 200;
+  color: #f1f1f1;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+#form {
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+#form h4 {
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  border-bottom: #0056b3 2px solid;
+  display: inline;
+}
+
+#form #contact-form {
+  margin: 15px auto;
+}
+
+label {
+  font-family: "PT Mono", monospace;
+  font-weight: 200;
+  margin-left: 1px;
+  color: #f1f1f1;
+  padding: 0 0 0 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="button"] {
+  font-family: "PT Mono", monospace;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: p "PT Mono", monospace background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* ---------------------------- Footer -----------------------------------*/
+
+footer {
+  font-size: 16px;
+  padding-top: 50px;
+  margin-top: 10px;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  height: 125px;
+  color: black;
+}
+
+footer h6 {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ---------------------------- Chat Box --------------------------*/
+
+#chat-box {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100%;
+  background-color: #000000;
+  font-family: "PT Mono", monospace;
+  cursor: pointer;
+  text-align: center;
+  line-height: 45px;
+  animation: pulse 2s infinite;
+}
+
+#chat-box i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Chat Window */
+.chat-window {
+  z-index: 1000;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  width: 400px;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.chat-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.chat-text {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #ddd;
+  width: fit-content;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.profile-icon img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.chat-footer {
+  padding: 10px;
+  display: flex;
+}
+
+.chat-footer button {
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------------------- Div --------------------------*/
+
+hr.divider {
+  height: 0.1rem;
+  max-width: 5rem;
+  margin: 1rem auto;
+  background-color: #333;
+  border: none;
+  opacity: 0.9; 
+}

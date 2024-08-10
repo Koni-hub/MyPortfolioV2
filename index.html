@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="Author" content="Argie P. Delgado" />
+    <meta name="Tools" content="HTML, CSS, JS" />
+    <meta
+      name="description"
+      content="Welcome to my portfolio! It's not just a showcase of projects, but a story of growth. I'm all about continuous learning and improvement."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/mobile-style.css" />
+    <!-- Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/20fbad04b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Toggle Dark Mode -->
+    <link rel="stylesheet" href="./assets/css/toggle.css" />
+    <!-- Button CSS -->
+    <link rel="stylesheet" href="./assets/css/button.css" />
+    <!-- Star CSS -->
+    <link rel="stylesheet" href="./assets/css/star.css" />
+    <title>| Argie's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo-container">
+          <a
+            href="https://www.facebook.com/argie.delgado.04"
+            target="_self"
+            id="logo-name"
+            ><span>Argie Delgado</span></a
+          >
+        </div>
+        <button class="menu-button" id="toggle-menu" onclick="openNav()">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <ul id="nav-ul">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Carousel Section -->
+      <section id="main">
+        <a href="#" title="main-link"></a>
+        <section class="carousel-container">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slide">
+                <img
+                  id="slide-1"
+                  src="https://e0.pxfuel.com/wallpapers/329/765/desktop-wallpaper-web-design-dark-developer.jpg"
+                  alt="Web Design"
+                />
+                <div class="text-overlay">
+                  Mobile & Web Application Developer
+                </div>
+              </div>
+              <div class="slide">
+                <img
+                  id="slide-2"
+                  src="https://wallpapercave.com/wp/wp12250727.png"
+                  alt="Ethical Hacker"
+                />
+                <div class="text-overlay">Ethical Hacker</div>
+              </div>
+              <div class="slide">
+                <img
+                  id="slide-3"
+                  src="https://e0.pxfuel.com/wallpapers/475/125/desktop-wallpaper-digital-black-cyberkov-professional-cybersecurity.jpg"
+                  alt="Cyber Security Dev"
+                />
+                <div class="text-overlay">Cyber Security</div>
+              </div>
+              <div class="slide">
+                <img
+                  id="slide-4"
+                  src="https://c4.wallpaperflare.com/wallpaper/384/861/178/halo-video-games-wallpaper-preview.jpg"
+                  alt="Game Dev"
+                />
+                <div class="text-overlay">Game Developer</div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </section>
+      </section>
+      <!-- About -->
+      <section id="about" class="about" data-aos="fade-up">
+        <a href="#about" title="about-link"></a>
+        <h1>About</h1>
+        <hr class="divider" />
+        <div class="info">
+          <img
+            src="./assets/img/profile.png"
+            width="320px"
+            height="350px"
+            alt="Profile Image"
+            class="show-once"
+          />
+          <div class="slide-left show-once">
+            <h5>
+              Hello, there! I'm Argie, a 17-year-old senior at STI Marikina
+              pursuing a Bachelor of Science in Computer Science and currently
+              interested in the exciting world of web and app development. My
+              passions include ethical hacking, cybersecurity, and web and app
+              development. As I develop the challenges and opportunities that
+              web and app development brings, I am excited about the upcoming
+              learning experiences. As I pursue a Bachelor of Science in
+              Computer Science (BSCS), I will not only enhance my skill set but
+              also have a better grasp of the world of technology.
+            </h5>
+            <div class="about-info">
+              <div class="info-holder">
+                <p>Hobies</p>
+                <p>Music</p>
+              </div>
+              <div class="info-colon">
+                <p>:</p>
+                <p>:</p>
+              </div>
+              <div class="info-value">
+                <p>Playing Online Games, Coding</p>
+                <p>Cadmium - No Friends (Lyrics) Feat. Rosendale</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="skills" data-aos="fade-up">
+        <a href="#skills" title="skills-link"></a>
+        <h1>Skills</h1>
+        <hr class="divider" />
+        <h3>The skills, tools and technologies I am really good at:</h3>
+        <div class="info-container">
+          <div class="info-card-container">
+            <div class="info-card">
+              <img src="./assets/img//tools/html-5.png" alt="HTML" />
+              <h4>HTML</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/css-3.png" alt="CSS" />
+              <h4>CSS</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/js.png" alt="JS" />
+              <h4>Javascript</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/java.png" alt="JAVA" />
+              <h4>Java</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/c-sharp.png" alt="CSHARP" />
+              <h4>C-Sharp</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/database.png" alt="SQL" />
+              <h4>Sql</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/php.png" alt="PHP" />
+              <h4>PHP</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/mysql.png" alt="MYSQL" />
+              <h4>Mysql</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/reactJS.png" alt="ReactJS" />
+              <h4>ReactJS</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/nodeJS.png" alt="NodeJS" />
+              <h4>NodeJS</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/linux.png" alt="Linux" />
+              <h4>Linux</h4>
+            </div>
+            <div class="info-card">
+              <img src="./assets/img/tools/cpp.png" alt="CPLUSPLUS" />
+              <h4>C++</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Project -->
+      <section id="project" class="project" data-aos="fade-up">
+        <a href="#project" title="project-link"></a>
+        <h1>Project</h1>
+        <hr class="divider" />
+        <div class="project-container">
+          <div class="project-card-container" id="carousel">
+            <div class="project-card">
+              <div class="img-holder">
+                <a href="./assets/img/project/online-ordering-system.png">
+                  <img
+                    src="./assets/img/project/online-ordering-system.png"
+                    alt="Food Web System"
+                  />
+                </a>
+              </div>
+              <div class="description">
+                <h3>Online Ordering System</h3>
+                <h5>
+                  A standalone Online Ordering System for G12 exposition event
+                  in STI College Marikina. Its easy-to-use interface enables
+                  businesses to track sales effortlessly and gain insights into
+                  their overall performance, fostering confident growth.
+                </h5>
+                <ul class="tech-stack">
+                  <li class="tools">NodeJS</li>
+                  <li class="tools">ReactJS</li>
+                  <li class="tools">JS</li>
+                  <li class="tools">JSON</li>
+                </ul>
+                <div class="group-btn">
+                  <a href="https://github.com/KoniDevs/CucinaDeMarquina">
+                    <button class="button-github">
+                      <span
+                        ><i
+                          class="fa-brands fa-github"
+                          style="color: #fff"
+                          id="github"
+                        ></i
+                      ></span>
+                    </button>
+                  </a>
+                  <a href="https://cucinademarquina.versatily.website/login">
+                    <button class="learn-more">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">View Demo</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Repeat the project-card block for other projects -->
+          </div>
+          <button class="prev" id="project-prev">&#10094;</button>
+          <button class="next" id="project-next">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- Service -->
+      <section id="service" class="service" data-aos="fade-up">
+        <a href="#service" title="service-link"></a>
+        <h1>Service</h1>
+        <hr class="divider" />
+        <div class="service-container">
+          <div class="service-card-container">
+            <div class="service-card">
+              <img
+                src="assets/img/gif/Frontend.gif"
+                alt="front-end logo"
+                loading="lazy"
+              />
+              <h4>Full-Stack Development</h4>
+              <p>
+                I am a proficient full-stack developer with comprehensive
+                expertise in both front-end and back-end technologies.
+              </p>
+            </div>
+            <div class="service-card">
+              <img src="assets/img/gif/Optimization.gif" alt="Optimization" />
+              <h4>Performance Optimization</h4>
+              <p>
+                I have a profound understanding and expertise in optimizing
+                front-end code and assets to improve website user experience
+              </p>
+            </div>
+            <div class="service-card">
+              <img
+                src="assets/img/gif/Responsiveness.gif"
+                alt="responsive logo"
+                loading="lazy"
+              />
+              <h4>Responsive Web Design</h4>
+              <p>
+                As a web developer, I excel in crafting responsive web
+                applications that seamlessly adapt to diverse screen sizes and
+                devices
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section class="fade-in show-once" id="contact">
+        <a href="#contact" title="contact-link"></a>
+        <div class="session">
+          <div class="left">
+            <div class="contact-message">
+              <h4>Contact Me</h4>
+              <p style="padding-top: 15px">
+                I'm here to assist you! If you have any questions or need
+                assistance, please feel free to reach out to me. I'm ready to
+                provide prompt and helpful support to ensure that your concerns
+                are addressed effectively. Your satisfaction is my priority.
+                <br /><br />
+              </p>
+              <p>I use gmail.com to protect my email address from spam.</p>
+            </div>
+          </div>
+          <div class="right">
+            <div id="form">
+              <h4>Get In Touch</h4>
+              <form id="contact-form" style="margin-top: 15px">
+                <label>Name:</label> <br />
+                <input type="text" id="fullName" required /> <br />
+
+                <label>Email:</label> <br />
+                <input type="text" id="email_id" required /> <br />
+
+                <label>Comment:</label> <br />
+                <textarea id="message" rows="4" required></textarea> <br />
+
+                <input
+                  onclick="SendMail()"
+                  type="button"
+                  value="Send Message ✉"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="chat-box">
+      <i class="fab fa-facebook-messenger fa-lg" style="color: #ffffff"></i>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chat-window" class="chat-window hidden">
+      <div class="chat-header">
+        <div class="header-icon">
+          <img
+            src="./assets/img/profile-fb.jpg"
+            alt="icon-profile"
+          />
+        </div>
+        <div class="header-text">
+          <h4>Argie P. Delgado</h4>
+          <p>Always active and quick to reply</p>
+        </div>
+        <button id="close-chat" class="close-chat">X</button>
+      </div>
+      <div class="chat-content">
+        <div class="profile-icon">
+          <img
+            src="./assets/img/profile-fb.jpg"
+          />
+        </div>
+        <div class="chat-text">
+          <p>
+            Hello I'm Argie👋 <br />
+            How can I help you today?
+          </p>
+        </div>
+      </div>
+      <a href="https://www.facebook.com/messages/t/100042898537541">
+        <div class="chat-footer">
+          <button>
+            Start Chat with:
+            <i
+              class="fab fa-facebook-messenger fa-lg"
+              style="color: #ffffff"
+            ></i>
+          </button>
+        </div>
+      </a>
+    </div>
+
+    <footer id="footer">
+      <h6>&copy; Copyright reserved by Koni</h6>
+    </footer>
+    <script src="./assets/js/toggle.js"></script>
+    <!-- Library Imports -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="./assets/js/scrollreveal.js"></script>
+
+    <!-- Custom JavaScript Files -->
+    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/typewritter.js"></script>
+    <script src="./assets/js/sendEmail.js"></script>
+
+    <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init("zxpAY7tfdYatNo1xO");
+      })();
+
+      // Initialize AOS Library
+      AOS.init({
+        duration: 1500,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
