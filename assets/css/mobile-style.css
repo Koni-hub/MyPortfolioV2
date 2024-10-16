@@ -1,257 +1,421 @@
 /*---------------------------------- For Mobile Phone ---------------------------------------- */
 /* Media query for viewport width 950px or below */
 @media (max-width: 970px) {
-    /*--------------------------------------- Home ---------------------------------------------*/
+  /*--------------------------------------- Home ---------------------------------------------*/
 
-    #mySidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 20px;
-        cursor: pointer;
-        font-size: 65px;
-        color: white;
-        transition: color 0.3s ease;
-    }
+  #mySidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+    font-size: 65px;
+    color: white;
+    transition: color 0.3s ease;
+  }
 
-    .slide .text-overlay {
-        font-size: 2.5rem;
-    }
+  .slide .text-overlay {
+    font-size: 2.5rem;
+  }
 
-    .container-home {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        flex-direction: column-reverse;
-    }
+  .container-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex-direction: column-reverse;
+  }
 
-    #home p{
-        margin: 10px;
-    }
+  #home p {
+    margin: 10px;
+  }
 
-    #home {
-        padding: 85px 0 0 0;
-    }
-    /*--------------------------------------- About ---------------------------------------------*/
+  #home {
+    padding: 85px 0 0 0;
+  }
+  /*--------------------------------------- About ---------------------------------------------*/
 
-    .info {
-        flex-direction: column;
-        align-items: center;
-    }
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .about-info .info div {
-        width: 100%;
-        text-align: center;
-    }
+  .about-info .info div {
+    width: 100%;
+    text-align: center;
+  }
 
-    .info h5 {
-        padding-top: 25px;
-        line-height: 35px;
-    }
+  .info h5 {
+    padding-top: 25px;
+    line-height: 35px;
+  }
 
-    .info img {
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-    }
+  .info img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
 
-    #about {
-        margin: 10px;
-    }
+  #about {
+    margin: 10px;
+  }
 
-    /* ------------------------------------ Service ------------------------------------------- */
+  /* ------------------------------------ Service ------------------------------------------- */
 
-    .service-container {
-        margin: 15px;
-    }
+  .service-container {
+    margin: 15px;
+  }
 
-    .service-card-container {
-        padding-bottom: 25px;
-        display: grid;
-        grid-template-columns: repeat(1 , auto); 
-    }
+  .service-card-container {
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
 
-    .service-card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        margin: 10px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-    }
+  .service-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
 
-    .service-card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        margin: 10px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-    }
-    
-    .service-card img {
-        max-width: 150px;
-        min-height: 200px;
-    }
+  .service-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
 
-    /* ------------------------------------ Skills ------------------------------------------- */
+  .service-card img {
+    max-width: 150px;
+    min-height: 200px;
+  }
 
-    .info-card-container {
-        margin: 0 auto;
-        max-width: 1200px;
-        grid-template-columns: repeat(3, auto);
-    }
+  /* ------------------------------------ Skills ------------------------------------------- */
 
-    /* ------------------------------------ Project ------------------------------------------- */
+  .info-card-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-template-columns: repeat(3, auto);
+  }
 
-    .project h1 {
-        margin-top: 50px;
-        font-size: 2em;
-    }
+  /* ------------------------------------ Project ------------------------------------------- */
 
-    .project-container {
-        padding: 20px;
-    }
+  .project h1 {
+    margin-top: 50px;
+    font-size: 2em;
+  }
 
-    .project-card {
-        flex-direction: column;
-        height: auto;
-    }
+  .project-container {
+    padding: 20px;
+  }
 
-    .project-card .img-holder {
-        border-radius: 1.2rem 1.2rem 0 0;
-    }
+  .project-card {
+    flex-direction: column;
+    height: auto;
+  }
 
-    .project-card .description {
-        padding: 1.5rem;
-    }
-    
-    /* ------------------------------------ Contact ------------------------------------------- */
+  .project-card .img-holder {
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
 
-    #contact {
-        margin: 15px;
-    }
+  .project-card .description {
+    padding: 1.5rem;
+  }
 
-    .session {
-        gap: 60px;
-        margin: 0;
-        grid-template-columns: repeat(1, auto);
-    }
+  /* ------------------------------------ Service ------------------------------------------- */
+  .service h1 {
+    margin-top: 50px;
+    font-size: 2em;
+  }
 
-    .contact-message p  {
-        display: inline-block;
-        padding-bottom: 5px;
-        letter-spacing: 1px
-    }
+  /* ------------------------------------ Contact ------------------------------------------- */
+
+  #contact {
+    margin: 15px;
+  }
+
+  .session {
+    gap: 60px;
+    margin: 0;
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .contact-message p {
+    display: inline-block;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+  }
 }
 
 @media (min-width: 970px) {
-    #mySidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 20px;
-        cursor: pointer;
-        font-size: 65px;
-        color: white;
-        transition: color 0.3s ease;
-    }
+  #mySidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+    font-size: 65px;
+    color: white;
+    transition: color 0.3s ease;
+  }
 }
 /*------------------------------Desktop mode for Mobile Phone-----------------------------------*/
 /* Media query for viewport width 1075px or below */
 @media (max-width: 1250px) {
-    
-    #home {
-        min-height: 100%;
-        padding-bottom: 15px;
-        margin: 10px;
-    }
+  #home {
+    min-height: 100%;
+    padding-bottom: 15px;
+    margin: 10px;
+  }
 
-    #click-btn {
-        margin-bottom: 25px;
-    }
+  #click-btn {
+    margin-bottom: 25px;
+  }
 
-    .service-card-container {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        justify-content: center;
-    }
+  .service-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
 }
 
 /*------------------------------Desktop mode----------------------------------*/
 @media (min-width: 1200px) {
+  #mySidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    cursor: pointer;
+    font-size: 65px;
+    color: white;
+    transition: color 0.3s ease;
+  }
 
-    #mySidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 60px;
-        cursor: pointer;
-        font-size: 65px;
-        color: white;
-        transition: color 0.3s ease;
-    }
+  nav {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 
-    nav {
-        margin: 0 auto;
-        max-width: 1200px;
-    }
+  .session {
+    grid-template-columns: repeat(2, auto);
+    gap: 280px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 
-    .session {
-        grid-template-columns: repeat(2, auto);
-        gap: 280px;
-        margin: 0 auto;
-        max-width: 1200px;
-    }
+  .left {
+    max-width: 150px;
+  }
 
-    .left {
-        max-width: 150px;
-    }
+  .right {
+    max-width: 950px;
+  }
 
-    .right {
-        max-width: 950px;
-    }
+  .contact-message {
+    width: 500px;
+  }
 
-    .contact-message {
-        width: 500px;
-    }
+  .project-container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 
-    .project-container {
-        margin: 0 auto;
-        max-width: 1200px;
-    }
+  .service-container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 
-    .service-container {
-        margin: 0 auto;
-        max-width: 1200px;
-    }
-    
-    .info-card-container {
-        margin: 0 auto;
-        max-width: 1200px;
-        grid-template-columns: repeat(4, auto);
-    }
+  .info-card-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-template-columns: repeat(4, auto);
+  }
 }
 
 @media (max-width: 520px) {
-
-    .info-card-container {
-        margin: 0 auto;
-        max-width: 1200px;
-        grid-template-columns: repeat(2, auto);
-    }
+  .info-card-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 @media (max-width: 400px) {
+  .home #image-home {
+    display: none;
+  }
 
-    .home #image-home {
-        display: none;
-    }
+  .info-card-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    grid-template-columns: repeat(1, auto);
+  }
+}
 
-    .info-card-container {
-        margin: 0 auto;
-        max-width: 1200px;
-        grid-template-columns: repeat(1, auto);
-    }
+/* Responsive adjustments for chat window small viewports */
+@media (max-width: 500px) {
+  .chat-window {
+    z-index: 1000;
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    width: 100%;
+    max-width: 400px;
+    height: 260px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .chat-header {
+    padding: 10px;
+  }
+
+  .header-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-content {
+    margin: 45px 55px 45px auto;
+  }
+
+  .chat-text {
+    margin: 5px;
+  }
+
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-footer {
+    padding: 5px;
+  }
+
+  .chat-footer button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .chat-window {
+    margin: 10px;
+    right: 5px;
+    width: 90%;
+    height: 210px;
+  }
+
+  .chat-header {
+    padding: 10px;
+  }
+
+  .header-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-content {
+    margin: 10px auto;
+  }
+
+  .chat-text {
+    margin: 5px;
+  }
+
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-footer {
+    padding: 5px;
+  }
+
+  .chat-footer button {
+    padding: 8px;
+  }
+}
+@media (max-width: 350px) {
+  .chat-window {
+    margin: 10px;
+    right: 5px;
+    width: 90%;
+    height: 240px;
+  }
+
+  .chat-header {
+    padding: 10px;
+  }
+
+  .header-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-content {
+    margin: 10px auto;
+  }
+
+  .chat-text {
+    margin: 5px;
+  }
+
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-footer {
+    padding: 5px;
+  }
+
+  .chat-footer button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 259px) {
+  .chat-window {
+    margin: 10px;
+    right: 5px;
+    width: 90%;
+    height: 250px;
+  }
+
+  .chat-header {
+    padding: 10px;
+  }
+
+  .header-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-content {
+    margin: 10px auto;
+  }
+
+  .chat-text {
+    margin: 5px;
+  }
+
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-footer {
+    padding: 5px;
+  }
+
+  .chat-footer button {
+    padding: 8px;
+  }
 }
