@@ -284,9 +284,13 @@ li a {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #333;
   opacity: 0.75;
   transition: opacity ease 250ms;
+}
+
+.slider-nav a.active {
+  background-color: #fff;
 }
 
 .slider-nav a:hover {
@@ -677,6 +681,10 @@ a {
   font-weight: 900;
   border-bottom: #0056b3 2px solid;
   display: inline;
+}
+
+#contact-form {
+  margin-top: 15px
 }
 
 #form #contact-form {
