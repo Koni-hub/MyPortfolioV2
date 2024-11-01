@@ -124,21 +124,34 @@ document.addEventListener("DOMContentLoaded", function () {
 // Carousel
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider img");
+const dots = document.querySelectorAll(".slider-nav a");
 let index = 0;
 
 function showSlide(i) {
   index = (i + slides.length) % slides.length;
   slider.style.transform = `translateX(-${index * 100}%)`;
+  updateActiveDot();
 }
 
-document
-  .querySelector(".next")
-  .addEventListener("click", () => showSlide(index + 1));
-document
-  .querySelector(".prev")
-  .addEventListener("click", () => showSlide(index - 1));
+function updateActiveDot() {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", (event) => {
+    event.preventDefault();
+    showSlide(i);
+  });
+});
+
+document.querySelector(".next").addEventListener("click", () => showSlide(index + 1));
+document.querySelector(".prev").addEventListener("click", () => showSlide(index - 1));
 
 setInterval(() => showSlide(index + 1), 5000);
+
+showSlide(index);
 
 // Project Carousel
 const carousel = document.querySelector(".project-card-container");
