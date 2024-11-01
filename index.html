@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/mobile-style.css" />
+    <link rel="stylesheet" href="./assets/css/mobile-style.css" />  
     <!-- Font Awesome Kit -->
     <script
       src="https://kit.fontawesome.com/20fbad04b0.js"
@@ -38,7 +38,7 @@
             ><span>Argie Delgado</span></a
           >
         </div>
-        <button class="menu-button" id="toggle-menu" onclick="openNav()">
+        <button title="open-nav" class="menu-button" id="toggle-menu" onclick="openNav()">
           <div class="hamburger">
             <span></span>
             <span></span>
@@ -103,10 +103,10 @@
             </div>
           </div>
           <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <a href="#slide-2"></a>
-            <a href="#slide-3"></a>
-            <a href="#slide-4"></a>
+            <a title="dot-1" data-index="0"></a>
+            <a title="dot-2" data-index="1"></a>
+            <a title="dot-3" data-index="2"></a>
+            <a title="dot-4" data-index="3"></a>
           </div>
           <button class="prev">&#10094;</button>
           <button class="next">&#10095;</button>
@@ -243,8 +243,8 @@
                   <li class="tools">JSON</li>
                 </ul>
                 <div class="group-btn">
-                  <a href="https://github.com/KoniDevs/CucinaDeMarquina">
-                    <button class="button-github">
+                  <a href="">
+                    <button title="github-btn" class="button-github">
                       <span
                         ><i
                           class="fa-brands fa-github"
@@ -254,7 +254,7 @@
                       ></span>
                     </button>
                   </a>
-                  <a href="https://cucinademarquina.versatily.website/login">
+                  <a href="">
                     <button class="learn-more">
                       <span class="circle" aria-hidden="true">
                         <span class="icon arrow"></span>
@@ -335,15 +335,15 @@
           <div class="right">
             <div id="form">
               <h4>Get In Touch</h4>
-              <form id="contact-form" style="margin-top: 15px">
+              <form id="contact-form">
                 <label>Name:</label> <br />
-                <input type="text" id="fullName" required /> <br />
+                <input title="fullName" type="text" id="fullName" required /> <br />
 
                 <label>Email:</label> <br />
-                <input type="text" id="email_id" required /> <br />
+                <input title="email" type="text" id="email_id" required /> <br />
 
                 <label>Comment:</label> <br />
-                <textarea id="message" rows="4" required></textarea> <br />
+                <textarea title="description" id="message" rows="4" required></textarea> <br />
 
                 <input
                   onclick="SendMail()"
@@ -378,7 +378,7 @@
       </div>
       <div class="chat-content">
         <div class="profile-icon">
-          <img
+          <img title="profile-img"
             src="./assets/img/profile-pic.png"
           />
         </div>
