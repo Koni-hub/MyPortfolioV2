@@ -1,7 +1,7 @@
 function SendMail() {
 
-    var serverID = "service_ql9r7h2";
-    var templateID = "template_ud3wymg";
+    var serverID = "service_mfai0ea";
+    var templateID = "template_v47qvdv";
 
     var fullName = document.getElementById("fullName").value;
     var email_id = document.getElementById("email_id").value;
