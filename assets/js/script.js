@@ -161,14 +161,14 @@ const totalSlides = cards.length;
 
 function projectSlowSlide(projectIndex) {
   projectCurrentIndex = (projectIndex + totalSlides) % totalSlides;
-  carousel.style.transform = `translateX(-${projectCurrentIndex * 100}%)`; // I have a fucking problem
+  carousel.style.transform = `translateX(-${projectCurrentIndex * 105}%)`; // I have a fucking problem
 }
 
 document.querySelector("#project-next").addEventListener("click", () => projectSlowSlide(projectCurrentIndex + 1));
 document.querySelector("#project-prev").addEventListener("click", () => projectSlowSlide(projectCurrentIndex - 1));
 
-// Auto slide every 5 seconds
-setInterval(() => projectSlowSlide(projectCurrentIndex + 1), 7000);
+// Auto slide every 10 seconds
+setInterval(() => projectSlowSlide(projectCurrentIndex + 1), 10000);
 
 // Initialize the first slide
 projectSlowSlide(projectCurrentIndex);

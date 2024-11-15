@@ -437,6 +437,7 @@ li a {
   display: flex;
   transition: transform 0.3s ease-in-out;
   width: 100%;
+  gap: 55px;
 }
 
 .project-card {
@@ -482,18 +483,21 @@ li a {
 
 .project-card .img-holder {
   box-sizing: border-box;
-  padding: 4.8rem 25px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   overflow: hidden;
-  position: relative;
   border: solid 0.1rem #f3f4f6;
   background-color: #f9fafb;
 }
 
 .project-card img {
-  object-fit: contain;
+  object-fit: fill;
   max-width: 100%;
   min-height: 250px;
+  height: auto;
 }
 
 .project-card .description {
